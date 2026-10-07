@@ -218,3 +218,63 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ==========================================
+# Deep Learning Datasets & Large Archives
+# ==========================================
+dataset/
+Dataset/
+data/
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Retain dataset documentation / instructions
+!dataset/**/README.md
+
+# ==========================================
+# Model Weights & Training Runs (>50MB)
+# ==========================================
+weights/*.pt
+weights/*.pth
+weights/*.onnx
+weights/*.engine
+*.pt
+*.pth
+*.onnx
+*.tflite
+runs/
+checkpoints/
+wandb/
+
+# Retain weights directory and documentation
+!weights/README.md
+!weights/.gitkeep
+
+# ==========================================
+# Dashboard & Web Application (Node / Next.js)
+# ==========================================
+**/node_modules/
+**/.next/
+**/out/
+dashboard/backend/uploads/*
+!dashboard/backend/uploads/.gitkeep
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================================
+# Video, Heavy Inference Dumps & Outputs
+# ==========================================
+*.mp4
+*.avi
+*.mov
+*.mkv
+outputs/
+results/
+inference_output/
